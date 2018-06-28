@@ -31,4 +31,4 @@ Generate a passphrase from 8+ letter words
     passGenHR.getUltimatePassPhrase(4) // -->  'federalni narukvica krijesnica organizacija'
 
 
-Default number of words is 4
+All functions take one optional argument - number of words in passphrase. Default value od words in passphrase is 4.

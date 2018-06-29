@@ -33,7 +33,9 @@ Generate a passphrase from 8+ letter words
 
 All functions take one optional argument - number of words in passphrase. Default value od words in passphrase is 4.
 
-### Direct uglified script only and include it in your project 
+
+
+### Download uglified script only and include it in your project 
 
 Download ```passphraseGeneratorHR.js``` from dist folder and include it in your html:
 

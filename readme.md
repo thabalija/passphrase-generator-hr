@@ -1,5 +1,9 @@
 # passphrase-generator-hr
 
+[![Build Status](https://travis-ci.org/thabalija/passphrase-generator-hr.svg?branch=master)](https://travis-ci.org/thabalija/passphrase-generator-hr)
+
+[![MIT License][license-image]][license-url]
+
 Passphrase generator with croatian dictionary (scraped words from web).
 
 ## Usage

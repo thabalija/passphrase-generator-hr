@@ -1,6 +1,6 @@
 # passphrase-generator-hr
 
-Passphrase generator with croatian words.
+Passphrase generator with croatian dictionary (scraped words from web).
 
 ## Usage
 

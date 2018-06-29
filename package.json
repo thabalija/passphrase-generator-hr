@@ -31,5 +31,6 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0"
-  }
+  },
+  "typings": "./typings.d.ts"
 }

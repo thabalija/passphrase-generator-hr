@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/thabalija/passphrase-generator-hr.svg?branch=master)](https://travis-ci.org/thabalija/passphrase-generator-hr)
 
-[![MIT License][license-image]][license-url]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/thabalija/passphrase-generator-hr/blob/master/LICENCE)
 
 Passphrase generator with croatian dictionary (scraped words from web).
 

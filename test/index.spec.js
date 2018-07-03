@@ -84,20 +84,20 @@ describe('Function generatePassphrase(numberOfWords, useDashes, wordArrays)', ()
     it('should return string', () => {
         let numberOfWords = 1;
         let wordArrays = [['word'], ['word']]
-        let passphrase = passphraseGeneratorHR.generatePassphrase(numberOfWords, wordArrays);
+        let passphrase = passphraseGeneratorHR.generatePassphrase(numberOfWords, false, wordArrays);
         expect(passphrase).to.be.a('string');
     });
     it('should return right amount of words', () => {
         let numberOfWords = 1;
         let wordArrays = [['word'], ['word']]
-        let passphrase = passphraseGeneratorHR.generatePassphrase(numberOfWords, wordArrays);
+        let passphrase = passphraseGeneratorHR.generatePassphrase(numberOfWords, false, wordArrays);
         let wordArray = passphrase.split(' ');
         expect(wordArray.length).to.equal(numberOfWords);
     });
     it('should return right result', () => {
         let numberOfWords = 1;
         let wordArrays = [['word']]
-        let passphrase = passphraseGeneratorHR.generatePassphrase(numberOfWords, wordArrays);
+        let passphrase = passphraseGeneratorHR.generatePassphrase(numberOfWords, false, wordArrays);
         expect(passphrase).to.equal(wordArrays[0][0]);
     });
 });

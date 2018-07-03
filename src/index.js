@@ -13,8 +13,8 @@ import {
  * Returns randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
  */
-export function getPassphrase(numberOfWords) {
-    return this.generatePassphrase(numberOfWords, [
+export function getPassphrase(numberOfWords, useDashes = false) {
+    return this.generatePassphrase(numberOfWords, useDashes, [
         threeLetterWords, fourLetterWords, fiveLetterFords, sixLetterWords,
         sevenLetterWords, eightLetterWords, nineLetterWords, tenAndMoreLetterWords
     ]);
@@ -24,24 +24,24 @@ export function getPassphrase(numberOfWords) {
  * Returns simple (3-6 letter words) randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
  */
-export function getSimplePassphrase(numberOfWords = 4) {
-    return this.generatePassphrase(numberOfWords, [threeLetterWords, fourLetterWords, fiveLetterFords]);
+export function getSimplePassphrase(numberOfWords = 4, useDashes = false) {
+    return this.generatePassphrase(numberOfWords, useDashes, [threeLetterWords, fourLetterWords, fiveLetterFords]);
 }
 
 /**
  * Returns simple (6-9 letter words) randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
  */
-export function getStrongPassphrase(numberOfWords = 4) {
-    return this.generatePassphrase(numberOfWords, [sixLetterWords, sevenLetterWords, eightLetterWords]);
+export function getStrongPassphrase(numberOfWords = 4, useDashes = false) {
+    return this.generatePassphrase(numberOfWords, useDashes, [sixLetterWords, sevenLetterWords, eightLetterWords]);
 }
 
 /**
  * Returns simple (8+ letter words) randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
  */
-export function getUltimatePassphrase(numberOfWords = 4) {
-    return this.generatePassphrase(numberOfWords, [nineLetterWords, tenAndMoreLetterWords]);
+export function getUltimatePassphrase(numberOfWords = 4, useDashes = false) {
+    return this.generatePassphrase(numberOfWords, useDashes, [nineLetterWords, tenAndMoreLetterWords]);
 }
 
 /**
@@ -49,12 +49,16 @@ export function getUltimatePassphrase(numberOfWords = 4) {
  * @param {number} numberOfWords - number of words in passphrase
  * @param {Array} wordArray - array of word arrays
  */
-export function generatePassphrase(numberOfWords, wordArrays) {
+export function generatePassphrase(numberOfWords, useDashes, wordArrays) {
     const wordArray = [].concat(...wordArrays);
     const passphrase = [];
     for (let i = 0; i < numberOfWords; i++) {
         passphrase.push(wordArray[Math.floor(Math.random() * wordArray.length)]);
     }
-    return passphrase.join(' ');
+    if (useDashes) {
+        return passphrase.join('-');
+    } else {
+        return passphrase.join(' ');
+    }
 }
 

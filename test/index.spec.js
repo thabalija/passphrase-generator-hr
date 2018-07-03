@@ -4,20 +4,20 @@ import * as passphraseGeneratorHR from '../src/index';
 
 let expect = chai.expect;
 
-describe('Function getPassphrase(numberOfWords)', () => {
+describe('Function getPassphrase(numberOfWords, useDashes)', () => {
     it('should return string', () => {
         let passphrase = passphraseGeneratorHR.getPassphrase();
         expect(passphrase).to.be.a('string');
     });
     it('should return right amount of words', () => {
-        const numberOfWords = 5; 
+        const numberOfWords = 5;
         let passphrase = passphraseGeneratorHR.getPassphrase(numberOfWords);
         let wordArray = passphrase.split(' ');
         expect(wordArray.length).to.equal(numberOfWords);
     });
 });
 
-describe('Function getSimplePassphrase(numberOfWords)', () => {
+describe('Function getSimplePassphrase(numberOfWords, useDashes)', () => {
     it('should return string', () => {
         let passphrase = passphraseGeneratorHR.getSimplePassphrase();
         expect(passphrase).to.be.a('string');
@@ -38,7 +38,7 @@ describe('Function getSimplePassphrase(numberOfWords)', () => {
     });
 });
 
-describe('Function getStrongPassphrase(numberOfWords)', () => {
+describe('Function getStrongPassphrase(numberOfWords, useDashes)', () => {
     it('should return string', () => {
         let passphrase = passphraseGeneratorHR.getStrongPassphrase();
         expect(passphrase).to.be.a('string');
@@ -59,7 +59,7 @@ describe('Function getStrongPassphrase(numberOfWords)', () => {
     });
 });
 
-describe('Function getUltimatePassphrase(numberOfWords)', () => {
+describe('Function getUltimatePassphrase(numberOfWords, useDashes)', () => {
     it('should return string', () => {
         let passphrase = passphraseGeneratorHR.getUltimatePassphrase();
         expect(passphrase).to.be.a('string');
@@ -80,7 +80,7 @@ describe('Function getUltimatePassphrase(numberOfWords)', () => {
     });
 });
 
-describe('Function generatePassphrase(numberOfWords, wordArrays)', () => {
+describe('Function generatePassphrase(numberOfWords, useDashes, wordArrays)', () => {
     it('should return string', () => {
         let numberOfWords = 1;
         let wordArrays = [['word'], ['word']]

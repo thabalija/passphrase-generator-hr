@@ -1,6 +1,6 @@
 {
   "name": "passphrase-generator-hr",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Passphrase generator with croatian dictionary.",
   "main": "index.js",
   "scripts": {

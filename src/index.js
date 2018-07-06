@@ -12,6 +12,7 @@ import {
 /**
  * Returns randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
+ * @param {boolean} useDashes - if true words are connected with a dash, if false with space
  */
 export function getPassphrase(numberOfWords, useDashes = false) {
     return this.generatePassphrase(numberOfWords, useDashes, [
@@ -23,6 +24,7 @@ export function getPassphrase(numberOfWords, useDashes = false) {
 /**
  * Returns simple (3-6 letter words) randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
+ * @param {boolean} useDashes - if true words are connected with a dash, if false with space
  */
 export function getSimplePassphrase(numberOfWords = 4, useDashes = false) {
     return this.generatePassphrase(numberOfWords, useDashes, [threeLetterWords, fourLetterWords, fiveLetterFords]);
@@ -31,6 +33,7 @@ export function getSimplePassphrase(numberOfWords = 4, useDashes = false) {
 /**
  * Returns simple (6-9 letter words) randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
+ * @param {boolean} useDashes - if true words are connected with a dash, if false with space
  */
 export function getStrongPassphrase(numberOfWords = 4, useDashes = false) {
     return this.generatePassphrase(numberOfWords, useDashes, [sixLetterWords, sevenLetterWords, eightLetterWords]);
@@ -39,6 +42,7 @@ export function getStrongPassphrase(numberOfWords = 4, useDashes = false) {
 /**
  * Returns simple (8+ letter words) randomly generated passphrase
  * @param {number} numberOfWords - number of words in passphrase
+ * @param {boolean} useDashes - if true words are connected with a dash, if false with space
  */
 export function getUltimatePassphrase(numberOfWords = 4, useDashes = false) {
     return this.generatePassphrase(numberOfWords, useDashes, [nineLetterWords, tenAndMoreLetterWords]);
@@ -47,6 +51,7 @@ export function getUltimatePassphrase(numberOfWords = 4, useDashes = false) {
 /**
  * returns generated passphrase for given parameters
  * @param {number} numberOfWords - number of words in passphrase
+ * @param {boolean} useDashes - if true words are connected with a dash, if false with space
  * @param {Array} wordArray - array of word arrays
  */
 export function generatePassphrase(numberOfWords, useDashes, wordArrays) {

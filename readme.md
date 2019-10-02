@@ -20,39 +20,49 @@ Import functions you need from module
 import { getPassphrase, getUltimatePassPhrase } from 'passphrase-generator-hr';
 ```
 
-Generate a passphrase from random length words 
+Generate a passphrase from random length words
+
 ```javascript
-getPassPhrase() // --> 'banana vuk mahovina prezime'
+getPassPhrase(); // --> 'banana vuk mahovina prezime'
 ```
 
-Generate a passphrase from 3-5 letter words  
+Generate a passphrase from 3-5 letter words
+
 ```javascript
-getSimplePassPhrase() // --> 'oko palac crta zrak'
+getSimplePassPhrase(); // --> 'oko palac crta zrak'
 ```
 
-Generate a passphrase from 6-8 letter words  
+Generate a passphrase from 6-8 letter words
+
 ```javascript
-getStrongPassPhrase() // --> 'arkada zahvat mlijeko roditelj'
+getStrongPassPhrase(); // --> 'arkada zahvat mlijeko roditelj'
 ```
 
 Generate a passphrase from 8+ letter words
+
 ```javascript
-getUltimatePassPhrase() // -->  'federalni narukvica krijesnica organizacija'
+getUltimatePassPhrase(); // -->  'federalni narukvica krijesnica organizacija'
 ```
 
-All functions take two *optional* arguments - number of words in passphrase and use dashes with default values ```4``` and ```false```.
+All functions take two _optional_ arguments - number of words in passphrase and use dashes with default values `4` and `false`.
+
 ```javascript
-getSimplePassPhrase(3, true) // --> 'oko-palac-crta'
+getSimplePassPhrase(3, true); // --> 'oko-palac-crta'
 ```
 
-### Download uglified script only and include it in your project 
+### Download uglified script only and include it in your project
 
-Download ```passphraseGeneratorHR.js``` from dist folder and include it in your html:
+Download `passphraseGeneratorHR.js` from dist folder and include it in your html:
+
 ```html
-<script src="./path/to/script/passphraseGeneratorHR.js" type="text/javascript"></script>
+<script
+  src="./path/to/script/passphraseGeneratorHR.js"
+  type="text/javascript"
+></script>
 ```
 
 and use it in your script:
+
 ```javascript
 passphraseGeneratorHR.getPassphrase(); // --> 'banana vuk mahovina prezime'
 ```
